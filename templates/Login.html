@@ -1,0 +1,60 @@
+
+{% include "Gheader.html" %}
+
+<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+
+{% block body %}
+<div class="container">
+
+
+
+
+
+
+            <h2>Login Page</h2>
+			
+			<div class="panel-body">
+
+<form  method="post">
+<div class="form-group">
+
+    <label for="name">Name</label>
+    <input type="text" class="form-control" name="name" id="name" required = "1"  >
+
+</div>
+
+
+    <div class="form-group">
+
+    <label for="name">Password</label>
+    <input type="text" class="form-control" name="password" id="password" required = "1" >
+
+
+    <div class="form-group">
+        <input type="hidden" name="id" value="1">
+
+     <input type="hidden" name="action" value="edit">
+	 <h5>  </h5>
+     <a href="{{ url_for('Index')}}"><input type="submit" class="btn btn-success" name="submit" value="submit"></a>
+
+</div>
+
+
+</form>
+
+
+
+
+
+
+
+  {% include "footer.html" %}
+    </div>
+
+
+{% endblock %}
+
+
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+
+<script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
